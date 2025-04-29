@@ -153,7 +153,7 @@
             localStorage.setItem(username, JSON.stringify({ username, password }));
 
             alert("Signup successful! Please log in.");
-            window.location.href = "Dashboard.html"; 
+            window.location.href = "Dashboard.html";
             // Switch back to login mode
             authHeading.textContent = "Login";
             authForm.removeEventListener("submit", signup);
@@ -163,20 +163,11 @@
 
         // Show guest login form
         guestLoginBtn.addEventListener("click", () => {
-            authHeading.textContent = "Login as Guest";
-            authForm.removeEventListener("submit", login);
-            authForm.removeEventListener("submit", signup);
-            authForm.addEventListener("submit", guestLogin);
-            errorMessage.textContent = ""; // Clear any error messages
+            localStorage.setItem("loggedInUser", "guest"); // Simulate guest login
+            alert("Loggedin as guest")
+            window.location.href = "Dashboard.html"; // Redirect immediately
         });
 
-        // Handle guest login
-        function guestLogin(event) {
-            event.preventDefault();
-            localStorage.setItem("loggedInUser", "guest"); // Simulate guest login
-            alert("Logged in as Guest!");
-            window.location.href = "Dashboard.html"; // Redirect after guest login
-        }
 
         // Handle user login
         function login(event) {
@@ -213,4 +204,5 @@
     </script>
 
 </body>
+
 </html>
