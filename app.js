@@ -146,11 +146,6 @@ function renderHomePage() {
                     <h2>To-Do List</h2>
                     <p>Click here to manage your tasks efficiently.</p>
                 </div>
-                <div class="feature">
-                    <i class="bx bx-bar-chart-alt-2"></i>
-                    <h2>Analytics</h2>
-                    <p>Get powerful insights to make data-driven decisions.</p>
-                </div>
             </div>
         </div>
     `;
